@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>太极</title>
+</head>
+<style type="text/css">
+*{margin:0;padding:0}
+.container{
+	width:200px;
+	height:200px;
+	box-sizing:border-box;
+	margin:10px auto;
+	position:relative;
+	border-radius: 50%;
+    box-shadow: 20px 0 20px #666;
+	animation:xuanzhuan 15s linear infinite;;
+	
+}
+.div1,.div2{width:50%;height:200px;box-sizing:border-box}
+.div1{
+	background:#000;
+	float:left;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	border-left:1px solid #eee;
+	border-radius:100px 0 0 100px
+}
+.div2{
+	background:#fff;
+	float:left;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	border-right:1px solid #eee;
+	border-radius:0 100px 100px 0;
+	}
+.div3{
+	width:100px;
+	height:100px;
+	background:#000;
+	padding:35px 0;
+	box-sizing:border-box;
+	border-radius:50%;
+	position:absolute;
+	left:50px;
+	box-shadow:1px 0 0 #eee;
+}
+.div31{
+	width:30px;
+	height:30px;
+	background:#fff;
+	margin:0 auto;
+	border-radius:50%
+}
+.div4{
+	width:100px;
+	height:100px;
+	background:#fff;
+	padding:35px 0;
+	box-sizing:border-box;
+	border-radius:50%;
+	position:absolute;
+	left:50px;
+	bottom:0;
+	}
+.div41{
+	width:30px;
+	height:30px;
+	background:#000;
+	margin:0 auto;
+	border-radius:50%
+}
+@keyframes  xuanzhuan{
+	0%{
+		transform:rotate(0deg);
+	},
+	100%{
+		transform:rotate(-360deg);
+	}
+}
+</style>
+<body>
+	<div class="container">
+		<div class="div1"></div>
+		<div class="div2"></div>
+	<div class="div3">
+			<div class="div31"></div>
+		</div>
+		<div class="div4">
+			<div class="div41"></div>
+		</div>
+	</div>
+		
+</body>
+</html>

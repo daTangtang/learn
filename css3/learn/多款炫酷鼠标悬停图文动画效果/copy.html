@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标悬停</title>
+</head>
+<style>
+    /*公共部分*/
+    html,body,ul,li,div{padding:0;margin:0}
+    body{background:#040d1c;}
+    ul{list-style:none;}
+    .clear{clear：both}
+    ul li{float:left;width:25%;margin :0 4%;position:relative;overflow: hidden}
+    h1{text-align:center;color: #ffffff;}
+    .portal{border:4px solid rgba(255,255,255,0.9);text-align:center;vertical-align:middle;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;  }
+    .portal img{transition: 0.5s;max-width:100%}
+    .text{transition:0.5s;background:rgba(255,255,255,0.9);width:100%;height:100%;position:absolute;left:0;top:0;opacity:0;}
+    .text-desc{width:100%;height:100%;position:absolute;left:0;top:0;}
+    .text span{text-align:center;display:block;}
+    .text span a{background:#2a5fba;position:absolute;bottom:20px;margin-left:-38px;text-decoration: none;color:#fff;display:inline-block;padding: 4px 6px;border-radius: 4px;}
+    .btn{background: #2a5fba;text-decoration: none;color:#f0f0f0;padding:4px 6px;}
+    /*公共部分*/
+    /*effect1*/
+    .effect_1 .text{top:-100%;}
+    .effect_1:hover .text{top:0;opacity: 0.9;}
+    .page_1:hover img{transform:scale(1.1);}
+
+    .effect_2 .text{bottom:-100%;top:auto;}
+    .effect_2:hover .text{bottom:0;opacity: 0.9;}
+
+    .effect_3 .text{width:0;height:0;left:50%;top:50%}
+    .effect_3:hover .text{width:100%;height:100%;top:0;left:0;opacity: 0.9;}
+    /**/
+    .port-2{float: left; width: 100%; position: relative; overflow: hidden; text-align: center;box-sizing:border-box; border: 4px solid rgba(255, 255, 255, 0.9); perspective: 800px;}
+    .port-2 .text-desc{ background:rgb(255,255,255);z-index: -1; transition: 0.6s;}
+    .port-2 .image-box{transition: 0.4s;}
+    .port-2:hover .image-box{transform: rotateX(80deg); transform-origin: center bottom 0; transition: 0.4s;}
+    .port-2.effect-2 .text-desc{top:-100%}
+    .port-2.effect-2:hover .text-desc{top:0;}
+    .port-2.effect-3 .text-desc{bottom:-100%;top:auto;}
+    .port-2.effect-3:hover .text-desc{bottom:0;}
+
+    .port-3{box-sizing:border-box;float: left; width: 100%; position: relative; overflow: hidden; text-align: center; border: 4px solid rgba(255, 255, 255, 0.9); perspective: 500px;}
+    .port-3 .text-desc{ background:rgb(255,255,255);transition: 0.6s;}
+    .port-3 .image-box{transition: 0.4s;}
+    .port-3.effect-1 .text-desc{z-index: -1; transform:rotateX(80deg);transform-origin:center top 0;}
+    .port-3.effect-1:hover .text-desc{transform: none;z-index:1;opacity:0.9}
+    .port-3.effect-1:hover .image-box { transform:scale(1.2)}
+
+    .port-3.effect-2 .text-desc{z-index: -1; transform:rotateX(80deg);transform-origin:center bottom 0;}
+    .port-3.effect-2 .image-box{bottom:0;}
+    .port-3.effect-2:hover .text-desc{ transform: none;z-index:1;}
+    .port-3.effect-2:hover img{ transition:0.6s;transform: translateY(-100%)}
+
+    .port-3.effect-3 .text-desc{z-index: -1; transform:rotateX(80deg);transform-origin:center top 0;}
+    .port-3.effect-3 .image-box{top:0;}
+    .port-3.effect-3:hover .text-desc{ transform: none;z-index:1;}
+    .port-3.effect-3:hover img{ transition:0.6s;transform: translateY(100%)}
+
+    /*effect4*/
+    .port-4{box-sizing:border-box;float: left; width: 100%; position: relative; overflow: hidden; text-align: center; border: 4px solid rgba(255, 255, 255, 0.9); perspective: 500px;}
+    .port-4.effect-1 .text-desc{ background:rgb(255,255,255);transform: rotateY(0deg);scale(0,0);transition: 0.6s;opacity:0}
+    .port-4 .image-box{transition:0.6s;scale(0,0);transform: rotateY(0deg);}
+    .port-4.effect-1:hover .image-box{ transform: rotateY(360deg);opacity:0;scale(0,0);}
+    .port-4.effect-1:hover .text-desc{ transform: rotateY(360deg);opacity:1;scale(1,1);}
+</style>
+<body>
+<div class="container">
+    <h1>effect1</h1>
+    <ul class="page ">
+        <li class="page_1 effect_1">
+            <div class="portal">
+                <img src="../img/11.jpg" />
+            </div>
+            <div class="text">
+                <span>鹿晗</span>
+                <p>鹿晗歌手、演员、逗逼。帅气帅气气.啦啦啦啦啦啦啦啦啦啦啦啦</p>
+                <span><a href="#">了解更多</a></span>
+            </div>
+        </li>
+        <li class="page_1 effect_2">
+            <div class="portal">
+                <img src="../img/11.jpg" />
+            </div>
+            <div class="text">
+                <span>鹿晗</span>
+                <p>鹿晗歌手、演员、逗逼。帅气帅气气.啦啦啦啦啦啦啦啦啦啦啦啦</p>
+                <span><a href="#">了解更多</a></span>
+            </div>
+        </li>
+        <li class="page_1 effect_3">
+            <div class="portal">
+                <img src="../img/11.jpg" />
+            </div>
+            <div class="text">
+                <span>鹿晗</span>
+                <p>鹿晗歌手、演员、逗逼。帅气帅气气.啦啦啦啦啦啦啦啦啦啦啦啦</p>
+                <span><a href="#">了解更多</a></span>
+            </div>
+        </li>
+    </ul>
+    <p><br></p>
+    <h1>effect2</h1>
+    <ul>
+        <li>
+            <div class="port-2 effect-1">
+                <div class="image-box">
+                    <img src="../img/12.jpg"  />
+                </div>
+                <div class="text-desc">
+                    <h3>Your Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="port-2 effect-2">
+                <div class="image-box">
+                    <img src="../img/12.jpg"  />
+                </div>
+                <div class="text-desc">
+                    <h3>Your Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="port-2 effect-3">
+                <div class="image-box">
+                    <img src="../img/12.jpg"  />
+                </div>
+                <div class="text-desc">
+                    <h3>Your Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <h1>effect3</h1>
+    <ul>
+        <li>
+            <div class="port-3 effect-1">
+                <div class="image-box">
+                    <img src="../img/13.jpg"  />
+                </div>
+                <div class="text-desc">
+                    <h3>Your Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="port-3 effect-2">
+                <div class="image-box">
+                    <img src="../img/13.jpg"  />
+                </div>
+                <div class="text-desc">
+                    <h3>Your Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="port-3 effect-3">
+                <div class="image-box">
+                    <img src="../img/13.jpg"  />
+                </div>
+                <div class="text-desc">
+                    <h3>Your Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <h1>effect4</h1>
+    <ul>
+        <li>
+            <div class="port-4 effect-1">
+                <div class="image-box">
+                    <img src="../img/14.jpg"  />
+                </div>
+                <div class="text-desc">
+                    <h3>Your Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="port-4 effect-2">
+                <div class="image-box">
+                    <img src="../img/14.jpg"  />
+                </div>
+                <div class="text-desc">
+                    <h3>Your Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="port-4 effect-3">
+                <div class="image-box">
+                    <img src="../img/14.jpg"  />
+                </div>
+                <div class="text-desc">
+                    <h3>Your Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
